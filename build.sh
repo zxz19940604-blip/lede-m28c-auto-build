@@ -6,6 +6,7 @@ echo "install feeds"
 ./scripts/feeds install -a || { echo "install feeds failed"; exit 1; }
 #./scripts/feeds update qmodem
 ./scripts/feeds install -a -f -p qmodem || { echo "install qmodem feeds failed"; exit 1; }
+./scripts/feeds install -a -f -p fancontrol || { echo "install fancontrol feeds failed"; exit 1; }
 cat ../m28c.config > .config
 echo "make defconfig"
 make defconfig || { echo "defconfig failed"; exit 1; }
