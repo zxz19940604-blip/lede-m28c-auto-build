@@ -18,6 +18,7 @@ fi
 cat feeds.conf.default > feeds.conf
 echo "" >> feeds.conf
 echo "src-git qmodem https://github.com/FUjr/QModem.git;main" >> feeds.conf
+echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main" >> feeds.conf
 rm -rf files
 cp -r ../files .
 if [ -d "package/zz/luci-theme-alpha" ]; then
