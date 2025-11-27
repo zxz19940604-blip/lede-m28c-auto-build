@@ -25,7 +25,7 @@ wifi
 uci -q set zz_config.@status[0].first_boot=0
 uci commit zz_config
 fi
-
+cp patches/rk3528-mangopi-m28c.dts lede/target/linux/rockchip/files/arch/arm64/boot/dts/rockchip/rk3528-mangopi-m28c.dts
 sed -i "s?set wireless\.default_radio\${devidx}\.ssid=LEDE?set wireless\.default_radio\${devidx}\.ssid=\'M28C\'?g" /lib/wifi/mac80211.sh
 sed -i "s?set wireless\.default_radio\${devidx}\.encryption=none?set wireless\.default_radio\${devidx}\.encryption=\'psk2+ccmp\'\n\t\t\tset wireless\.default_radio\${devidx}\.key=\'12345678\'?g" /lib/wifi/mac80211.sh
 
