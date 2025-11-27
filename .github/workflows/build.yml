@@ -57,7 +57,6 @@ jobs:
       - name: Prepare release assets
         run: |
           mkdir -p release_assets
-          cp patches/rk3528-mangopi-m28c.dts lede/target/linux/rockchip/files/arch/arm64/boot/dts/rockchip/rk3528-mangopi-m28c.dts/ || true
           cp lede/bin/targets/rockchip/armv8/*.img.gz release_assets/ || true
           cp lede/bin/targets/rockchip/armv8/openwrt-rockchip-armv8-widora_mangopi-m28c.manifest release_assets/ || true
           cp lede/bin/targets/rockchip/armv8/config.buildinfo release_assets/ || true
