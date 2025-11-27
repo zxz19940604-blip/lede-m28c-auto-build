@@ -1,6 +1,5 @@
 #!/bin/bash -x
 cd lede
-cp patches/rk3528-mangopi-m28c.dts lede/target/linux/rockchip/files/arch/arm64/boot/dts/rockchip/rk3528-mangopi-m28c.dts
 echo "update feeds"
 ./scripts/feeds update -a || { echo "update feeds failed"; exit 1; }
 echo "install feeds"
