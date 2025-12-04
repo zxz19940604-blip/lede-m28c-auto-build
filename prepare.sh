@@ -18,6 +18,10 @@ fi
 cat feeds.conf.default > feeds.conf
 echo "" >> feeds.conf
 echo "src-git qmodem https://github.com/FUjr/QModem.git;main" >> feeds.conf
+echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf
+echo 'src-git nas https://github.com/linkease/nas-packages.git;master' >> feeds.conf
+echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >> feeds.conf
+#echo "src-git fancontrol https://github.com/LeeHe-gif/luci-app-fancontrol.git" >> "feeds.conf
 rm -rf files
 cp -r ../files .
 if [ -d "package/zz/luci-theme-alpha" ]; then
